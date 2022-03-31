@@ -4,8 +4,11 @@ banana x3
 <<<<<<< HEAD
 limon x6
 jagoda x5
+<<<<<<< HEAD
 =======
 kiva x6
 jagoda x1
 portokal x9
 >>>>>>> branch2
+=======
+>>>>>>> branch1
