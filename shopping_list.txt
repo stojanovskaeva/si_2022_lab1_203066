@@ -1,5 +1,6 @@
 jabolko x2
 krusa x4 
 banana x3
-limon x6
+kiva x6
 jagoda x1
+portokal x9
