@@ -1,0 +1,276 @@
+Прва лабораториска вежба
+Ева Стојановска, 203066
+
+1.
+2.
+3.
+4. $ git clone https://github.com/stojanovskaeva/si_2022_lab1_203066 
+	$ cd si_2022_lab1_203066
+5. $ nano shopping_list.txt
+   $ git add shopping_list.txt
+   $ git commit –m “Add 5 items to the shopping list”
+6. $ git commit –a –m “Add quantities to the items”
+7. $ git checkout –b branch1
+   $ git checkout –b branch2
+8. 
+User@DESKTOP-0N9E99A MINGW64 ~
+$ git clone ^[[200~https://github.com/stojanovskaeva/si_2022_lab1_203066~
+Cloning into 'si_2022_lab1_203066~'...
+fatal: protocol '?[200~https' is not supported
+
+User@DESKTOP-0N9E99A MINGW64 ~
+$ git clone https://github.com/stojanovskaeva/si_2022_lab1_203066
+Cloning into 'si_2022_lab1_203066'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+
+User@DESKTOP-0N9E99A MINGW64 ~
+$ cd si_2022_lab1_203066
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (master)
+$ nano shopping_list.txt
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (master)
+$ git add shopping_list.txt
+warning: LF will be replaced by CRLF in shopping_list.txt.
+The file will have its original line endings in your working directory
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (master)
+$ git commit -m "Add 5 items to the shopping list"
+[master 8380c48] Add 5 items to the shopping list
+ 1 file changed, 5 insertions(+)
+ create mode 100644 shopping_list.txt
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   shopping_list.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (master)
+$ git commit -a -m "Add quantities to the items"
+warning: LF will be replaced by CRLF in shopping_list.txt.
+The file will have its original line endings in your working directory
+[master 8e2ddff] Add quantities to the items
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (master)
+$ git branch -b branch1
+error: unknown switch `b'
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-l] [-f] <branch-name> [<start-point>]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
+    -t, --track[=(direct|inherit)]
+                          set branch tracking configuration
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      unset the upstream info
+    --color[=<when>]      use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --abbrev[=<n>]        use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --delete          delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --move            move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    -c, --copy            copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --list            list branch names
+    --show-current        show current branch name
+    --create-reflog       create the branch's reflog
+    --edit-description    edit the description for the branch
+    -f, --force           force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --column[=<style>]    list branches in columns
+    --sort <key>          field name to sort on
+    --points-at <object>  print only branches of the object
+    -i, --ignore-case     sorting and filtering are case insensitive
+    --format <format>     format to use for the output
+
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (master)
+$ git checkout -b branch1
+Switched to a new branch 'branch1'
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (branch1)
+$ git checkout -b branch2
+Switched to a new branch 'branch2'
+
+9. $ git push origin master
+   $ git push origin branch1
+   $ git push origin branch2
+
+10.$ git checkout branch1
+11.$ git commit –a –m “Change quantity of item #5”
+12.$ git checkout master
+13.$ git commit –a –m “Change quantity of item #2”
+14.$ git origin master
+   $ git origin branch1
+   $ git origin branch2
+15.$ git checkout branch2
+16.$ git commit –a –m “Modify item #4”
+17.
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (branch2)
+$ git push origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 678 bytes | 678.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/stojanovskaeva/si_2022_lab1_203066
+   9c67d66..8e2ddff  master -> master
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (branch2)
+$ git push origin branch1
+gTotal 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branch1' on GitHub by visiting:
+remote:      https://github.com/stojanovskaeva/si_2022_lab1_203066/pull/new/branch1
+remote:
+To https://github.com/stojanovskaeva/si_2022_lab1_203066
+ * [new branch]      branch1 -> branch1
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (branch2)
+$ git push origin branch2
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branch2' on GitHub by visiting:
+remote:      https://github.com/stojanovskaeva/si_2022_lab1_203066/pull/new/branch2
+remote:
+To https://github.com/stojanovskaeva/si_2022_lab1_203066
+ * [new branch]      branch2 -> branch2
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (branch2)
+$ git checkout branch1
+Switched to branch 'branch1'
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (branch1)
+$ git commit -a -m "Change quantity of item #5"
+warning: LF will be replaced by CRLF in shopping_list.txt.
+The file will have its original line endings in your working directory
+[branch1 0917efc] Change quantity of item #5
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (master)
+$ git commit -a -m "Change quantity of item #2"
+[master 59d6eae] Change quantity of item #2
+ 1 file changed, 1 insertions(+), 1 deletions(-)
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (master)
+$ git log --graph --decorate
+* commit 59d6eae6a29029b9d1ac27cb1fe05ec740656eed (HEAD -> master)
+| Author: stojanovskaeva <100574301+stojanovskaeva@users.noreply.github.com>
+| Date:   Thu Mar 31 15:23:10 2022 +0200
+|
+|     Change quantity of item #2
+|
+* commit 8e2ddff9c97db76363e28c347d68d958d49934ec (origin/master, origin/branch2, origin/branch1, origin/HEAD, branch2)
+| Author: stojanovskaeva <100574301+stojanovskaeva@users.noreply.github.com>
+| Date:   Thu Mar 31 14:57:15 2022 +0200
+|
+|     Add quantities to the items
+|
+* commit 8380c481224f02dabaa1c0f42d23d6de45336218
+| Author: stojanovskaeva <100574301+stojanovskaeva@users.noreply.github.com>
+| Date:   Thu Mar 31 14:54:47 2022 +0200
+|
+|     Add 5 items to the shopping list
+|
+* commit 9c67d66c6d5a133b6aff5dbf80c30bae2a3f0233
+| Author: stojanovskaeva <100574301+stojanovskaeva@users.noreply.github.com>
+| Date:   Thu Mar 31 14:39:49 2022 +0200
+|
+|     Update README.md
+|
+* commit fd338304a883a0b245eb3bad65048faa1a803d98
+  Author: stojanovskaeva <100574301+stojanovskaeva@users.noreply.github.com>
+  Date:   Thu Mar 31 14:39:01 2022 +0200
+
+      Initial commit
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 362 bytes | 362.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/stojanovskaeva/si_2022_lab1_203066
+   8e2ddff..59d6eae  master -> master
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (master)
+$ git push origin branch1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 365 bytes | 365.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+gTo https://github.com/stojanovskaeva/si_2022_lab1_203066
+   8e2ddff..0917efc  branch1 -> branch1
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (master)
+$ git push origin branch2
+Everything up-to-date
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (master)
+$ git checkout branch2
+Switched to branch 'branch2'
+
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (branch2)
+$ git commit -a -m "Modify item #4"
+[branch2 e6fdeab] Modify item #4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+18.$ git commit –amend –a –m “Modify item #4 and add item #6”
+19.
+User@DESKTOP-0N9E99A MINGW64 ~/si_2022_lab1_203066 (branch2)
+$ git commit --amend -a -m "Modify item #4 and add item #6"
+[branch2 19be2fa] Modify item #4 and add item #6
+ Date: Thu Mar 31 15:29:23 2022 +0200
+1 file changed, 2 insertions(+), 1 deletion(-)
+
+20.$ git checkout master
+   $ git commit –a –m “Merge branch1”
+   $ git merge branch1
+
+21.$ git commit –a –m “Merge branch2”
+   $ git merge branch2
+
+22.
+
+
+
+    
+		 
+
