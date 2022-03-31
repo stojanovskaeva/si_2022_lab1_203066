@@ -1,5 +1,11 @@
 jabolko x2
 krusa x2
 banana x3
+<<<<<<< HEAD
 limon x6
 jagoda x5
+=======
+kiva x6
+jagoda x1
+portokal x9
+>>>>>>> branch2
